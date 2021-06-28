@@ -1,0 +1,34 @@
+# config file version
+apiVersion: 1
+
+# list of datasources that should be deleted from the database
+deleteDatasources:
+  - name: Prometheus
+    orgId: 1
+#  - name: Azure
+#    orgId: 1
+
+datasources:
+- name: Prometheus
+  type: prometheus
+  access: proxy
+  orgId: 1
+  url: http://tasks.prometheus:9090
+  isDefault: true
+  version: 1
+  editable: false
+
+#- name: Azure
+#  type: grafana-azure-monitor-datasource
+#  access: direct
+#  orgId: 1
+#  isDefault: false
+#  jsonData:
+#    subscriptionId: $AZURE_SUBSCRIPTION_ID
+#    tenantId: $AZURE_TENANT_ID}
+#    clientId: ${AZURE_CLIENT_ID}
+#    cloudName: azuremonitor
+#  secureJsonData:
+#    clientSecret: ${AZURE_CLIENT_SECRET}
+#  version: 1
+#  editable: false

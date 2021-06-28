@@ -1,0 +1,23 @@
+notifiers:
+    - name: ITA-Slack-Channel
+      type: slack
+      uid: itaslack
+      org_id: 1
+      is_default: true
+      send_reminder: true
+      frequency: 1h
+      disable_resolve_message: false
+      settings:
+        #username: 'GrafanaAlerts'
+        recipient: '#team-pipeline'
+        token: ${BOT_TOKEN}
+        uploadImage: true
+        mentionChannel: 'channel'
+        #icon_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Biohazard_symbol_%28black_and_yellow%29.png/220px-Biohazard_symbol_%28black_and_yellow%29.png'
+        url: ${SLACK_CHANNEL}
+
+delete_notifiers:
+    - name: ITA-Slack-Channel
+      uid: itaslack
+      org_id: 1
+  
