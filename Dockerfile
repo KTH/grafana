@@ -1,4 +1,4 @@
-FROM grafana/grafana:8.3.1-ubuntu
+FROM grafana/grafana:8.4.3-ubuntu
 
 COPY notifiers.yaml /etc/grafana/provisioning/notifiers/notifiers_tmp.yaml
 
